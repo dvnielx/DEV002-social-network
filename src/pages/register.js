@@ -1,11 +1,10 @@
 // import { onNavigate } from "../../main.js";
  import { registerUser } from '../firebase/configuracion.js';
 
-//  const indexRegistro = document.getElementById('containerRegister');
-//  const indexInicioSesion = document.getElementById('container');
-//  const btnRegistrate = document.getElementById('registrate');
+ const indexRegistro = document.getElementById('containerRegister');
+ const indexInicioSesion = document.getElementById('container');
+ const btnRegistrate = document.getElementById('registrate');
  
-
 document.addEventListener("DOMContentLoaded", function() {
   const registerButton = document.getElementById('register-button');
   registerButton.addEventListener('click', (event) => {
@@ -16,6 +15,23 @@ document.addEventListener("DOMContentLoaded", function() {
       registerUser(email, password);
   });
 });
+
+// document.addEventListener("DOMContentLoaded", function() {
+//   const registerButton = document.getElementById('register-button');
+//   registerButton.addEventListener('click', (event) => {
+//       const pais = document.getElementById('paises').value;
+//       const edad = document.getElementById('edad').value;
+//       if(pais === "" || edad === "") {
+//         alert("Por favor, completa todos los campos");
+//       } else {
+//         event.preventDefault();
+//         console.log("click se ejecutó")
+//         const email = document.getElementById('emailRegister').value;
+//         const password = document.getElementById('passwordRegister').value;
+//         registerUser(email, password);
+//       }
+//   });
+// });
 
 
 export const Register = () => {
@@ -71,11 +87,6 @@ export const Register = () => {
     <button class="ingresar" id="register-button"> Registrar </button>
   </form>
 </section> </div>`
-//Este es el punto de entrada de tu aplicacion
-// import { GoogleAuthProvider } from "firebase/auth";
-
-
-
 
 divRegister.innerHTML = viewRegister;
 return divRegister;
